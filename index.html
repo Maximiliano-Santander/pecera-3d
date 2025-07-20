@@ -13,33 +13,41 @@
     </header>
 
     <main>
-        <!-- Controles de usuario -->
         <div id="controls">
-        <label>
-            Ancho (cm):
-            <input type="number" id="width" value="200" step="1" min="50" />
-        </label>
-        <label>
-            Alto (cm):
-            <input type="number" id="height" value="150" step="1" min="50" />
-        </label>
-        <label>
-            Profundidad (cm):
-            <input type="number" id="depth" value="100" step="1" min="50" />
-        </label>
-        <button id="updateDimensions">Actualizar dimensiones</button>
-        <button id="addGravel">Añadir gravilla</button>
-        <button id="addPlant">Añadir planta</button>
+            <label>
+                Ancho (cm):
+                <input type="number" id="width" value="200" step="1" min="50" />
+            </label>
+            <label>
+                Alto (cm):
+                <input type="number" id="height" value="150" step="1" min="50" />
+            </label>
+            <label>
+                Profundidad (cm):
+                <input type="number" id="depth" value="100" step="1" min="50" />
+            </label>
+
+            <label>
+                Textura gravilla:
+                <input type="file" id="gravillaTextureInput" accept="image/*" />
+            </label>
+            <label>
+                Modelo planta (GLB/GLTF):
+                <input type="file" id="plantModelInput" accept=".glb,.gltf" />
+            </label>
+
+            <button id="updateDimensions">Actualizar dimensiones</button>
+            <button id="addGravel">Añadir gravilla</button>
+            <button id="addPlant">Añadir planta</button>
         </div>
 
-        <!-- Contenedor de la escena 3D -->
         <div id="scene-container"></div>
     </main>
 
-    <!-- Three.js y controles de cámara -->
+    <!-- Three.js y extensión de controles -->
     <script src="https://cdn.jsdelivr.net/npm/three@0.140.0/build/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.140.0/examples/js/controls/OrbitControls.js"></script>
-    <!-- Tu lógica en JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.140.0/examples/js/loaders/GLTFLoader.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
